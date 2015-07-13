@@ -26,3 +26,9 @@ class Move(models.Model):
   y = models.IntegerField()
   comment = models.CharField(max_length=300)
   game = models.ForeignKey(Game)
+
+  def __str__(self):
+    return '%s %s %s' % (self.x, self.y, self.game)
+
+
+
