@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Game(models.Model):
@@ -12,3 +13,4 @@ class Move(models.Model):
   x = models.IntegerField()
   y = models.IntegerField()
   comment = models.CharField(max_length=300)
+  game = models.ForeignKey(Game)
